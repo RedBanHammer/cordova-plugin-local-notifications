@@ -33,7 +33,7 @@
 // Cancels all currently scheduled notifications
 - (void) cancelAll:(CDVInvokedUrlCommand*)command;
 // Sets the application badge number
-- (void) setBadgeNumber(CDVInvokedUrlCommand*)command;
+- (void) setBadgeNumber:(CDVInvokedUrlCommand*)command;
 // Checks wether a notification with an ID is scheduled
 - (void) isScheduled:(CDVInvokedUrlCommand*)command;
 // Retrieves a list of ids from all currently pending notifications
