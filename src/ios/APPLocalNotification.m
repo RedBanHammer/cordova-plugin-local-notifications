@@ -123,11 +123,22 @@
         [[UIApplication sharedApplication]
          cancelAllLocalNotifications];
 
-        [[UIApplication sharedApplication]
-         setApplicationIconBadgeNumber:0];
+        /*[[UIApplication sharedApplication]
+         setApplicationIconBadgeNumber:0];*/
 
         [self execCallback:command];
     }];
+}
+
+/**
+ * Sets the badge number
+ */
+- (void) setBadgeNumber:(CDVInvokedUrlCommand*)command
+{
+    NSMutableDictionary* options = [command.arguments objectAtIndex:0];
+    int badge = [[options objectForKey:@"badge"] intValue] ?: 0;
+
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badge];
 }
 
 /**

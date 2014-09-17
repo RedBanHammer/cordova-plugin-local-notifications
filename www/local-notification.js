@@ -210,6 +210,16 @@ LocalNotification.prototype = {
     },
 
     /**
+     * Sets the application badge number.
+     *
+     * @param {int} number
+     *      The number to set the badge to
+     */
+    cancelAll: function (number) {
+        cordova.exec(null, null, 'LocalNotification', 'setBadgeNumber', [number]);
+    },
+
+    /**
      * Retrieves a list with all currently pending notifications.
      *
      * @param {Function} callback
