@@ -215,7 +215,7 @@ LocalNotification.prototype = {
      * @param {int} number
      *      The number to set the badge to
      */
-    cancelAll: function (number) {
+    setBadgeNumber: function (number) {
         cordova.exec(null, null, 'LocalNotification', 'setBadgeNumber', [number]);
     },
 
